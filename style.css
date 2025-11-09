@@ -613,4 +613,134 @@ a{
     .about-section h2 {
         font-size: 24px;
     }
+    /* ====== FOOTER SECTION ====== */
+.footer {
+    background-color: #2c7a89; /* Teal/blue color matching reference image */
+    color: white;
+    padding: 60px 40px 20px 40px;
+    margin-top: 60px;
+    font-family: 'Poppins', sans-serif;
 }
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-column p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 8px 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #f0f0f0;
+}
+
+/* Schedule styling */
+.schedule-day {
+    font-weight: 600;
+    margin-bottom: 5px !important;
+}
+
+.schedule-time {
+    font-size: 14px;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateX(5px);
+    color: #f0f0f0;
+}
+
+.social-links i {
+    font-size: 18px;
+    width: 20px;
+}
+
+/* Contact Icons */
+.footer-column p i {
+    margin-right: 10px;
+    color: white;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+/* ====== FOOTER RESPONSIVE ====== */
+
+/* Tablets (768px to 1023px) */
+@media (max-width: 1023px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 767px) {
+    .footer {
+        padding: 40px 20px 20px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .social-links {
+        align-items: center;
+    }
+
+    .social-links a {
+        justify-content: center;
+    }
+
+    .footer-column h3 {
+        font-size: 20px;
+    }
+}
+
+}
+
