@@ -273,7 +273,7 @@ a{
     color: black;
     position: relative;
     text-align: center;
-    margin: 5px 0 25px 0; /* FIXED: Added 25px bottom margin for proper spacing */
+    margin: 5px 0 25px 0;
 }
 
 .title::after {
@@ -457,163 +457,6 @@ a{
     color: grey;
 }
 
-/* ====== RESPONSIVE MEDIA QUERIES ====== */
-
-@media (min-width: 1920px) {
-    .content-section {
-        max-width: 1600px;
-    }
-
-    .hero-logo {
-        width: 400px;
-    }
-
-    .right-img {
-        max-width: 550px;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(4, 1fr);
-        max-width: 1400px;
-    }
-
-    .categories {
-        grid-template-columns: repeat(4, 1fr);
-        max-width: 1400px;
-    }
-}
-
-@media (min-width: 1440px) and (max-width: 1919px) {
-    .content-section {
-        max-width: 1300px;
-    }
-
-    .hero-logo {
-        width: 380px;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(4, 1fr);
-        max-width: 1300px;
-    }
-
-    .categories {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-    .content-section {
-        max-width: 1000px;
-        padding: 70px 40px 15px 40px;
-    }
-
-    .hero-logo {
-        width: 300px;
-    }
-
-    .right-img {
-        max-width: 400px;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 1000px;
-    }
-
-    .categories {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 1023px) {
-    .nav-links {
-        display: none;
-    }
-
-    .content-section {
-        flex-direction: column;
-        padding: 70px 20px 15px 20px;
-        text-align: center;
-    }
-
-    .text-content {
-        max-width: 100%;
-    }
-
-    .hero-logo {
-        width: 250px;
-    }
-
-    .right-img {
-        max-width: 100%;
-        margin-top: 30px;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .categories {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .about-section {
-        padding: 40px 30px;
-    }
-}
-
-@media (max-width: 767px) {
-    nav {
-        padding: 15px 20px;
-    }
-
-    .logo-img {
-        width: 20%;
-    }
-
-    .content-section {
-        margin: 0 auto;
-        padding: 70px 15px 10px 15px;
-    }
-
-    .hero-logo {
-        width: 200px;
-    }
-
-    .text-content h1 {
-        font-size: 28px;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 15px;
-        margin: 10px auto 30px;
-    }
-
-    .product-card {
-        max-width: 100%;
-    }
-
-    .product-card img {
-        height: 180px;
-    }
-
-    .categories {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .about-section {
-        padding: 30px 20px;
-    }
-
-    .about-section h2 {
-        font-size: 24px;
-    }
-    /* ====== FOOTER SECTION - TWO COLUMN LAYOUT ====== */
 /* ================================================
    FOOTER SECTION - MATCHING SITE THEME
    ================================================ */
@@ -774,9 +617,74 @@ a{
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ====== RESPONSIVE MEDIA QUERIES ====== */
 
-@media (max-width: 1200px) {
+@media (min-width: 1920px) {
+    .content-section {
+        max-width: 1600px;
+    }
+
+    .hero-logo {
+        width: 400px;
+    }
+
+    .right-img {
+        max-width: 550px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1400px;
+    }
+
+    .categories {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .content-section {
+        max-width: 1300px;
+    }
+
+    .hero-logo {
+        width: 380px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1300px;
+    }
+
+    .categories {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .content-section {
+        max-width: 1000px;
+        padding: 70px 40px 15px 40px;
+    }
+
+    .hero-logo {
+        width: 300px;
+    }
+
+    .right-img {
+        max-width: 400px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+    }
+
+    .categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
     .footer-main {
         gap: 70px;
         padding: 0 40px 40px 40px;
@@ -788,6 +696,43 @@ a{
 }
 
 @media (max-width: 1023px) {
+    .nav-links {
+        display: none;
+    }
+
+    .content-section {
+        flex-direction: column;
+        padding: 70px 20px 15px 20px;
+        text-align: center;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .hero-logo {
+        width: 250px;
+    }
+
+    .right-img {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .about-section {
+        padding: 40px 30px;
+    }
+    
     .footer-main {
         flex-direction: column;
         gap: 50px;
@@ -806,6 +751,54 @@ a{
 }
 
 @media (max-width: 767px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    .logo-img {
+        width: 20%;
+    }
+
+    .content-section {
+        margin: 0 auto;
+        padding: 70px 15px 10px 15px;
+    }
+
+    .hero-logo {
+        width: 200px;
+    }
+
+    .text-content h1 {
+        font-size: 28px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+        margin: 10px auto 30px;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+
+    .categories {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-section {
+        padding: 30px 20px;
+    }
+
+    .about-section h2 {
+        font-size: 24px;
+    }
+    
     .site-footer {
         padding: 40px 0 20px 0;
         margin-top: 60px;
@@ -850,13 +843,3 @@ a{
         font-size: 13px;
     }
 }
-
-}
-
-
-
-
-
-
-
-
