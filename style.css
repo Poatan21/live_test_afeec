@@ -8,7 +8,7 @@
 body {
     background-color: rgb(214, 212, 212);
     margin: 0;
-    padding-top: 0; /* CRITICAL FIX: Removed the 70px padding */
+    padding-top: 0;
 }
 
 nav {
@@ -199,18 +199,17 @@ a{
     display: flex;
 }
 
-/* ====== HERO SECTION - ULTRA COMPACT ====== */
+/* ====== HERO SECTION ====== */
 .content-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1400px;
-    margin: 0 auto; /* CRITICAL FIX: Changed from 80px to 0 */
-    padding: 70px 60px 15px 60px; /* CRITICAL FIX: Minimal padding, only 70px top for fixed nav */
+    margin: 0 auto;
+    padding: 70px 60px 15px 60px;
     gap: 50px;
 }
 
-/* Text content on the left */
 .text-content {
     flex: 1;
     max-width: 600px;
@@ -241,7 +240,6 @@ a{
     margin-bottom: 20px;
 }
 
-/* Image stays on the RIGHT side */
 .right-img {
     width: 100%;
     max-width: 500px;
@@ -268,13 +266,14 @@ a{
     border: 1px solid black;
 }
 
+/* ====== TITLE WITH BALANCED SPACING ====== */
 .title {
     font-size: 25px;
     font-weight: 600;
     color: black;
     position: relative;
     text-align: center;
-    margin: 5px 0; /* CRITICAL FIX: Reduced from 20px to 5px */
+    margin: 5px 0 25px 0; /* FIXED: Added 25px bottom margin for proper spacing */
 }
 
 .title::after {
@@ -289,12 +288,12 @@ a{
     border-radius: 2px;
 }
 
-/* ====== PRODUCT GRID - ULTRA COMPACT ====== */
+/* ====== PRODUCT GRID ====== */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 30px;
-    margin: 15px auto 40px; /* CRITICAL FIX: Reduced from 60px to 15px */
+    margin: 15px auto 40px;
     max-width: 1200px;
     padding: 0 20px;
     justify-items: center;
@@ -460,7 +459,6 @@ a{
 
 /* ====== RESPONSIVE MEDIA QUERIES ====== */
 
-/* Wide monitors (1920px and up) */
 @media (min-width: 1920px) {
     .content-section {
         max-width: 1600px;
@@ -485,7 +483,6 @@ a{
     }
 }
 
-/* Large screens (1440px to 1919px) */
 @media (min-width: 1440px) and (max-width: 1919px) {
     .content-section {
         max-width: 1300px;
@@ -505,7 +502,6 @@ a{
     }
 }
 
-/* Laptops (1024px to 1439px) */
 @media (min-width: 1024px) and (max-width: 1439px) {
     .content-section {
         max-width: 1000px;
@@ -530,7 +526,6 @@ a{
     }
 }
 
-/* Tablets (768px to 1023px) */
 @media (max-width: 1023px) {
     .nav-links {
         display: none;
@@ -570,7 +565,6 @@ a{
     }
 }
 
-/* Mobile (below 768px) */
 @media (max-width: 767px) {
     nav {
         padding: 15px 20px;
