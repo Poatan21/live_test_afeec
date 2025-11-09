@@ -8,7 +8,7 @@
 body {
     background-color: rgb(214, 212, 212);
     margin: 0;
-    padding-top: 0; /* FIXED: Changed from 70px to 0 */
+    padding-top: 0; /* CRITICAL FIX: Removed the 70px padding */
 }
 
 nav {
@@ -199,14 +199,14 @@ a{
     display: flex;
 }
 
-/* ====== HERO SECTION - COMPLETELY FIXED ====== */
+/* ====== HERO SECTION - ULTRA COMPACT ====== */
 .content-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1400px;
-    margin: 0 auto; /* FIXED: Removed all margin spacing */
-    padding: 70px 60px 20px 60px; /* FIXED: Added top padding to account for fixed nav */
+    margin: 0 auto; /* CRITICAL FIX: Changed from 80px to 0 */
+    padding: 70px 60px 15px 60px; /* CRITICAL FIX: Minimal padding, only 70px top for fixed nav */
     gap: 50px;
 }
 
@@ -274,7 +274,7 @@ a{
     color: black;
     position: relative;
     text-align: center;
-    margin: 10px 0; /* FIXED: Reduced from 20px to 10px */
+    margin: 5px 0; /* CRITICAL FIX: Reduced from 20px to 5px */
 }
 
 .title::after {
@@ -289,12 +289,12 @@ a{
     border-radius: 2px;
 }
 
-/* ====== PRODUCT GRID ====== */
+/* ====== PRODUCT GRID - ULTRA COMPACT ====== */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 30px;
-    margin: 20px auto 40px; /* FIXED: Reduced top margin to 20px */
+    margin: 15px auto 40px; /* CRITICAL FIX: Reduced from 60px to 15px */
     max-width: 1200px;
     padding: 0 20px;
     justify-items: center;
@@ -509,7 +509,7 @@ a{
 @media (min-width: 1024px) and (max-width: 1439px) {
     .content-section {
         max-width: 1000px;
-        padding: 70px 40px 20px 40px;
+        padding: 70px 40px 15px 40px;
     }
 
     .hero-logo {
@@ -538,7 +538,7 @@ a{
 
     .content-section {
         flex-direction: column;
-        padding: 70px 20px 20px 20px;
+        padding: 70px 20px 15px 20px;
         text-align: center;
     }
 
@@ -582,7 +582,7 @@ a{
 
     .content-section {
         margin: 0 auto;
-        padding: 70px 15px 15px 15px;
+        padding: 70px 15px 10px 15px;
     }
 
     .hero-logo {
@@ -596,7 +596,7 @@ a{
     .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 15px;
-        margin-top: 15px;
+        margin: 10px auto 30px;
     }
 
     .product-card {
