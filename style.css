@@ -615,182 +615,144 @@ a{
     }
     /* ====== FOOTER SECTION - TWO COLUMN LAYOUT ====== */
 .footer {
-    background-color: #3d8b9c;
-    color: white;
-    padding: 50px 0 20px 0;
-    margin-top: 80px;
+    background-color: #3d8b9c !important;
+    color: white !important;
+    padding: 50px 0 20px 0 !important;
+    margin-top: 80px !important;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .footer-wrapper {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 60px;
-    display: flex;
-    gap: 100px;
-    align-items: flex-start;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0 60px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 100px !important;
+    align-items: flex-start !important;
 }
 
-/* LEFT SIDE: Newsletter (35% width) */
+/* Newsletter LEFT side */
 .footer-newsletter {
-    flex: 0 0 35%;
+    flex: 0 0 35% !important;
+    color: white !important;
 }
 
 .footer-newsletter h2 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: white;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    margin-bottom: 15px !important;
+    color: white !important;
 }
 
 .footer-newsletter p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    color: white;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 25px !important;
+    color: white !important;
 }
 
 .newsletter-form {
-    display: flex;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex !important;
+    flex-direction: row !important;
 }
 
 .newsletter-form input {
-    flex: 1;
-    padding: 14px 18px;
-    border: none;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-    background: white;
-    color: #333;
-}
-
-.newsletter-form input::placeholder {
-    color: #999;
+    flex: 1 !important;
+    padding: 14px 18px !important;
+    border: none !important;
+    font-size: 14px !important;
+    background: white !important;
+    color: #333 !important;
 }
 
 .newsletter-form button {
-    padding: 14px 30px;
-    background-color: #2d6b7a;
-    color: white;
-    border: none;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 14px 30px !important;
+    background-color: #2d6b7a !important;
+    color: white !important;
+    border: none !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
 }
 
 .newsletter-form button:hover {
-    background-color: #1f4e5c;
+    background-color: #1f4e5c !important;
 }
 
-/* RIGHT SIDE: Info Grid (65% width) */
+/* Info Grid RIGHT side */
 .footer-info-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px 80px;
+    flex: 1 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 35px 80px !important;
 }
 
 .info-item h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: white;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+    color: white !important;
 }
 
 .info-item p {
-    font-size: 14px;
-    line-height: 1.7;
-    margin: 3px 0;
-    color: white;
-}
-
-.info-item p strong {
-    font-weight: 600;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    margin: 3px 0 !important;
+    color: white !important;
 }
 
 .info-item a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    margin: 5px 0;
-    transition: opacity 0.3s;
-}
-
-.info-item a:hover {
-    opacity: 0.8;
+    display: block !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    margin: 5px 0 !important;
 }
 
 .info-item i {
-    margin-right: 8px;
-    font-size: 14px;
+    margin-right: 8px !important;
+    color: white !important;
 }
 
-/* Copyright */
 .footer-copyright {
-    text-align: center;
-    padding: 25px 20px 0;
-    margin-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.9);
+    text-align: center !important;
+    padding: 25px 20px 0 !important;
+    margin-top: 40px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+    font-size: 13px !important;
+    color: white !important;
 }
 
-/* ========================================
-   RESPONSIVE FOOTER
-   ======================================== */
+/* Responsive */
 @media (max-width: 1023px) {
     .footer-wrapper {
-        flex-direction: column;
-        gap: 50px;
-        padding: 0 30px;
+        flex-direction: column !important;
+        gap: 50px !important;
     }
-
+    
     .footer-newsletter {
-        flex: 1;
-        width: 100%;
-    }
-
-    .footer-info-grid {
-        width: 100%;
-        gap: 30px 50px;
+        flex: 1 !important;
+        width: 100% !important;
     }
 }
 
 @media (max-width: 767px) {
-    .footer {
-        padding: 40px 0 20px 0;
-    }
-
     .footer-wrapper {
-        padding: 0 20px;
-        gap: 35px;
+        padding: 0 20px !important;
     }
-
-    .footer-newsletter h2 {
-        font-size: 28px;
-    }
-
+    
     .newsletter-form {
-        flex-direction: column;
+        flex-direction: column !important;
     }
-
-    .newsletter-form button {
-        width: 100%;
-        padding: 12px;
-    }
-
+    
     .footer-info-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .info-item h3 {
-        font-size: 18px;
+        grid-template-columns: 1fr !important;
+        gap: 25px !important;
     }
 }
+
+
 
 
 
