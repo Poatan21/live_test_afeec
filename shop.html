@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affectious Closet</title>
+
+  <!-- Font Awesome -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="shopstyle.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <img src="logoafeec.png" alt="Affectious Closet Logo" class="logo-img">
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">Blog</a>
+      <a href="shop.html">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="icons">
+      <!-- Removed search icon and toggle -->
+      <a href="#login-modal"><i class="fas fa-user"></i></a>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </nav>
+
+  <!-- Login Modal -->
+  <div class="login-modal" id="login-modal">
+    <div class="login-box">
+      <h1><span style="color: black;">Login</span></h1>
+      <form>
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <a href="forgot.html">Forgot Password?</a>
+        <a href="signup.html">Create Account</a>
+        <button type="submit" class="btn">Login</button>
+        <a href="#" class="close-btn">Close</a>
+      </form>
+    </div>
+  </div>
+
+  <h2 class="section-title">Just For You</h2>
+
+  <!-- Category Filter -->
+  <div class="category-bar">
+    <button class="category-btn active" data-category="all">All</button>
+    <button class="category-btn" data-category="tshirt">T-shirts</button>
+    <button class="category-btn" data-category="hoodie">Hoodies</button>
+    <button class="category-btn" data-category="croptop">Croptop</button>
+    <button class="category-btn" data-category="hat">Hats</button>
+    <button class="category-btn" data-category="socks">Socks</button>
+    <button class="category-btn" data-category="jacket">Jackets</button>
+    <button class="category-btn" data-category="shoes">Shoes</button>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <button onclick="searchProducts()">Search</button>
+  </div>
+
+  <!-- Products Grid -->
+  <div class="product-grid" id="productGrid">
+
+<!-- SOCKS PRODUCTS -->
+<div class="product" data-category="socks" onclick="openProductModal('Fearless Socks', '₱219', [
+  'https://drive.google.com/uc?export=view&id=1wt4FeJeOFCbdUBb1fYUvZqdVqWLtl6Uz',
+  'https://drive.google.com/uc?export=view&id=1TLvCIg8XGg3ASf9ukLuEiK9ilhiVY_GK'
+], 'Bold and impactful socks with a strong logo and motivational design.')">
+  <img src="https://drive.google.com/uc?export=view&id=1wt4FeJeOFCbdUBb1fYUvZqdVqWLtl6Uz" alt="Fearless Socks">
+  <h3>Fearless Socks</h3>
+  <p class="price">₱219</p>
+  <button onclick="event.stopPropagation(); addToCart('Fearless Socks', 219)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Fearless Socks', 219)">Buy Now</button>
+</div>
+
+<div class="product" data-category="socks" onclick="openProductModal('Threads Socks', '₱239', [
+  'https://drive.google.com/uc?export=view&id=14BICE6uMd3yFpqqpeFMn6yIbpGsJFyEf',
+  'https://drive.google.com/uc?export=view&id=1nJ-gYNg6I3QiAqkS_kWoESe2YkLEi8ee'
+], 'Premium quality socks with focus on texture and comfort for an elegant feel.')">
+  <img src="https://drive.google.com/uc?export=view&id=14BICE6uMd3yFpqqpeFMn6yIbpGsJFyEf" alt="Threads Socks">
+  <h3>Threads Socks</h3>
+  <p class="price">₱239</p>
+  <button onclick="event.stopPropagation(); addToCart('Threads Socks', 239)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Threads Socks', 239)">Buy Now</button>
+</div>
+
+<div class="product" data-category="socks" onclick="openProductModal('Streetwear Socks', '₱259', [
+  'https://drive.google.com/uc?export=view&id=1hBbnEpTW7Cv-P9znkJq2pVw1N9B93CUp',
+  'https://drive.google.com/uc?export=view&id=1Eb8E-4AwN-26KVgQEaywv08G3lpIDKF7'
+], 'Athletic ribbed streetwear socks with a bold urban look, perfect for sneakers.')">
+  <img src="https://drive.google.com/uc?export=view&id=1hBbnEpTW7Cv-P9znkJq2pVw1N9B93CUp" alt="Streetwear Socks">
+  <h3>Streetwear Socks</h3>
+  <p class="price">₱259</p>
+  <button onclick="event.stopPropagation(); addToCart('Streetwear Socks', 259)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Streetwear Socks', 259)">Buy Now</button>
+</div>
+
+<div class="product" data-category="socks" onclick="openProductModal('Vibe Socks', '₱279', [
+  'https://drive.google.com/uc?export=view&id=1YM3pfoCC5jSzTDjZn0dU5wStOCHlTg1n',
+  'https://drive.google.com/uc?export=view&id=1MxaAtvQlhD3-Hwwi7ZM7yfP-guMPfwX8'
+], 'Essential everyday black socks with a clean and versatile style.')">
+  <img src="https://drive.google.com/uc?export=view&id=1YM3pfoCC5jSzTDjZn0dU5wStOCHlTg1n" alt="Vibe Socks">
+  <h3>Vibe Socks</h3>
+  <p class="price">₱279</p>
+  <button onclick="event.stopPropagation(); addToCart('Vibe Socks', 279)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Vibe Socks', 279)">Buy Now</button>
+</div>
+
+<div class="product" data-category="socks" onclick="openProductModal('Vibe Face Socks', '₱299', [
+  'https://drive.google.com/uc?export=view&id=1M4P36wylMu7t1BmK1jCciPYkdtGupmDQ',
+  'https://drive.google.com/uc?export=view&id=1l-_rQWap5KU05x6J8L2dzTGJCZ38jwPB'
+], 'Stylish black socks featuring subtle abstract facial art for a modern flair.')">
+  <img src="https://drive.google.com/uc?export=view&id=1M4P36wylMu7t1BmK1jCciPYkdtGupmDQ" alt="Vibe Face Socks">
+  <h3>Vibe Face Socks</h3>
+  <p class="price">₱299</p>
+  <button onclick="event.stopPropagation(); addToCart('Vibe Face Socks', 299)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Vibe Face Socks', 299)">Buy Now</button>
+</div>
+
+<!-- SHOES PRODUCTS -->
+
+<!-- 1. Crux Noir -->
+<div class="product" data-category="shoes" onclick="openProductModal('Crux Noir', '₱5,899', [
+  'https://drive.google.com/uc?export=view&id=1rFp_vSC1us4U6zBuVgRZkuKjVU571ozR',
+  'https://drive.google.com/uc?export=view&id=1W134GONebmdNYDM-56mvdXpot_9NBfeU'
+], 'High-top faux leather boots decorated with chains, studs, and cross charms for a bold rebellious look.')">
+  <img src="https://drive.google.com/uc?export=view&id=1rFp_vSC1us4U6zBuVgRZkuKjVU571ozR" alt="Crux Noir">
+  <h3>Crux Noir</h3>
+  <p class="price">₱5,899</p>
+  <button onclick="event.stopPropagation(); addToCart('Crux Noir', 5899)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Crux Noir', 5899)">Buy Now</button>
+</div>
+
+<!-- 2. Regalia -->
+<div class="product" data-category="shoes" onclick="openProductModal('Regalia', '₱4,999', [
+  'https://drive.google.com/uc?export=view&id=1WrGJ46bhTKciSyk3l0hIGqY6jCMjts_R',
+  'https://drive.google.com/uc?export=view&id=1y0QECyL9FWgtfPFWfKs2oFmttXgso6mk'
+], 'Low-top shoes with purple suede accents, silver cross embellishments, and a chunky lug sole for a punk-inspired look.')">
+  <img src="https://drive.google.com/uc?export=view&id=1WrGJ46bhTKciSyk3l0hIGqY6jCMjts_R" alt="Regalia">
+  <h3>Regalia</h3>
+  <p class="price">₱4,999</p>
+  <button onclick="event.stopPropagation(); addToCart('Regalia', 4999)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Regalia', 4999)">Buy Now</button>
+</div>
+
+<!-- 3. Phantom -->
+<div class="product" data-category="shoes" onclick="openProductModal('Phantom', '₱3,799', [
+  'https://drive.google.com/uc?export=view&id=1ZL_93NrQ01kUZaCYaitqUU5jO2jyDsE-',
+  'https://drive.google.com/uc?export=view&id=1Xszg3ZhaIwyjCVBbEg1a-TSdM7-nQwk7'
+], 'Chunky all-black sneakers with a speckled sole and sharp streetwear design.')">
+  <img src="https://drive.google.com/uc?export=view&id=1ZL_93NrQ01kUZaCYaitqUU5jO2jyDsE-" alt="Phantom">
+  <h3>Phantom</h3>
+  <p class="price">₱3,799</p>
+  <button onclick="event.stopPropagation(); addToCart('Phantom', 3799)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Phantom', 3799)">Buy Now</button>
+</div>
+
+<!-- 4. Cloudwalker -->
+<div class="product" data-category="shoes" onclick="openProductModal('Cloudwalker', '₱3,599', [
+  'https://drive.google.com/uc?export=view&id=146H0lw3frac0qH3W7PPwxRWk6aqj07ll',
+  'https://drive.google.com/uc?export=view&id=1qPTtwfKyL6_w8k2WfhXStD3wQJ4hLBkN'
+], 'Lightweight breathable running shoes with thick sculpted cushioning for all-day comfort.')">
+  <img src="https://drive.google.com/uc?export=view&id=146H0lw3frac0qH3W7PPwxRWk6aqj07ll" alt="Cloudwalker">
+  <h3>Cloudwalker</h3>
+  <p class="price">₱3,599</p>
+  <button onclick="event.stopPropagation(); addToCart('Cloudwalker', 3599)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Cloudwalker', 3599)">Buy Now</button>
+</div>
+
+<!-- 5. Velocity -->
+<div class="product" data-category="shoes" onclick="openProductModal('Velocity', '₱2,999', [
+  'https://drive.google.com/uc?export=view&id=1AX2m4JEg13ZM5-4_wpvFrukJbMdeqkdO',
+  'https://drive.google.com/uc?export=view&id=1wkpJSTGQ_xJRzdcPXORp0s7QLO5mVHiY'
+], 'Retro dad shoes with dynamic color blocking and oversized cushioned soles.')">
+  <img src="https://drive.google.com/uc?export=view&id=1AX2m4JEg13ZM5-4_wpvFrukJbMdeqkdO" alt="Velocity">
+  <h3>Velocity</h3>
+  <p class="price">₱2,999</p>
+  <button onclick="event.stopPropagation(); addToCart('Velocity', 2999)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Velocity', 2999)">Buy Now</button>
+</div>
+
+<!-- HATS PRODUCTS -->
+
+<!-- 1. Punk Woolen Beret -->
+<div class="product" data-category="hats" onclick="openProductModal('Punk Woolen Beret', '₱599', [
+  'https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_1',
+  'https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_2'
+], 'A punk-inspired woolen beret with a sleek PU brim, combining classic fabric with modern edgy style.')">
+  <img src="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_1" alt="Punk Woolen Beret">
+  <h3>Punk Woolen Beret</h3>
+  <p class="price">₱599</p>
+  <button onclick="event.stopPropagation(); addToCart('Punk Woolen Beret', 599)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Punk Woolen Beret', 599)">Buy Now</button>
+</div>
+
+<!-- 2. Batwing Buckle Hat -->
+<div class="product" data-category="hats" onclick="openProductModal('Batwing Buckle Hat', '₱700', [
+  'https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_3',
+  'https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_4'
+], 'Edgy gothic hat featuring batwing buckle design, chains, and pins for a bold punk look.')">
+  <img src="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_3" alt="Batwing Buckle Hat">
+  <h3>Batwing Buckle Hat</h3>
+  <p class="price">₱700</p>
+  <button onclick="event.stopPropagation(); addToCart('Batwing Buckle Hat', 700)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Batwing Buckle Hat', 700)">Buy Now</button>
+</div>
+
+<!-- 3. Faux Leather Beret -->
+<div class="product" data-category="hats" onclick="openProductModal('Faux Leather Beret', '₱759', [
+  'https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_5',
+  'https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_6'
+], 'A stylish faux leather beret crafted with premium material for a bold punk-inspired outfit.')">
+  <img src="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_5" alt="Faux Leather Beret">
+  <h3>Faux Leather Beret</h3>
+  <p class="price">₱759</p>
+  <button onclick="event.stopPropagation(); addToCart('Faux Leather Beret', 759)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Faux Leather Beret', 759)">Buy Now</button>
+</div>
+
+<!-- 4. Gothic Punk Cat Hat -->
+<div class="product" data-category="hats" onclick="openProductModal('Gothic Punk Cat Hat', '₱899', [
+  'https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_7',
+  'https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_8'
+], 'Black punk hat with cute cat ears, blending gothic edge with adorable punk charm.')">
+  <img src="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_7" alt="Gothic Punk Cat Hat">
+  <h3>Gothic Punk Cat Hat</h3>
+  <p class="price">₱899</p>
+  <button onclick="event.stopPropagation(); addToCart('Gothic Punk Cat Hat', 899)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Gothic Punk Cat Hat', 899)">Buy Now</button>
+</div>
+
+<!-- 5. Studded Steampunk Brim Hat -->
+<div class="product" data-category="hats" onclick="openProductModal('Studded Steampunk Brim Hat', '₱1300', [
+  'https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_9',
+  'https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_10'
+], 'Gothic cowboy hat with a wide brim decorated with spikes, bullet studs, and a ram emblem for maximum attitude.')">
+  <img src="https://drive.google.com/uc?export=view&id=YOUR_IMAGE_ID_9" alt="Studded Steampunk Brim Hat">
+  <h3>Studded Steampunk Brim Hat</h3>
+  <p class="price">₱1300</p>
+  <button onclick="event.stopPropagation(); addToCart('Studded Steampunk Brim Hat', 1300)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('Studded Steampunk Brim Hat', 1300)">Buy Now</button>
+</div>
+
+<!-- HOODIES PRODUCTS -->
+
+<!-- 1. URBAN -->
+<div class="product" data-category="hoodies" onclick="openProductModal('URBAN', '₱499', [
+  'https://drive.google.com/uc?export=view&id=1MyFC9SHCdubLPzcp9l_soW2F_1bh8mzn',
+  'https://drive.google.com/uc?export=view&id=15Gi-8dyGA3WY6vretWfNeqhbZp4QSNlD',
+  'https://images.scalebranding.com/bb488882-8256-446b-8b4b-950fdf842cc8.png'
+], 'This oversized dark olive hoodie features a distressed graphic with “HÆIST”.')">
+  <img src="https://drive.google.com/uc?export=view&id=1MyFC9SHCdubLPzcp9l_soW2F_1bh8mzn" alt="URBAN Hoodie">
+  <h3>URBAN</h3>
+  <p class="price">₱499</p>
+  <button onclick="event.stopPropagation(); addToCart('URBAN', 499)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('URBAN', 499)">Buy Now</button>
+</div>
+
+
+<!-- 2. BORED APE -->
+<div class="product" data-category="hoodies" onclick="openProductModal('BORED APE', '₱499', [
+  'https://drive.google.com/uc?export=view&id=1l-IEIfc4Irf9MaxuJUu2D1z-zXv1Mbc_',
+  'https://drive.google.com/uc?export=view&id=1EbBHGkhG9PP0y27pbkueajZd9YGzhzS4',
+  'https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-1.jpg?q=90&w=1400&cbr=1&fit=max'
+], 'Hoodie with BORED APE inspired artwork.')">
+  <img src="https://drive.google.com/uc?export=view&id=1l-IEIfc4Irf9MaxuJUu2D1z-zXv1Mbc_" alt="BORED APE Hoodie">
+  <h3>BORED APE</h3>
+  <p class="price">₱499</p>
+  <button onclick="event.stopPropagation(); addToCart('BORED APE', 499)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('BORED APE', 499)">Buy Now</button>
+</div>
+
+
+<!-- 3. DALI -->
+<div class="product" data-category="hoodies" onclick="openProductModal('DALI', '₱499', [
+  'https://drive.google.com/uc?export=view&id=1mNgxnNLW4q8CMllbFWEZsH2wNeafRVHJ',
+  'https://drive.google.com/uc?export=view&id=1x8DagvuNw1KJUZ83IAwCOiTM7w5ieN8E',
+  'https://cdn.vectorstock.com/i/750p/83/24/la-casa-de-papel-money-heist-mask-vector-39598324.avif'
+], 'DALI-inspired hoodie featuring the iconic Money Heist mask design.')">
+  <img src="https://drive.google.com/uc?export=view&id=1mNgxnNLW4q8CMllbFWEZsH2wNeafRVHJ" alt="DALI Hoodie">
+  <h3>DALI</h3>
+  <p class="price">₱499</p>
+  <button onclick="event.stopPropagation(); addToCart('DALI', 499)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('DALI', 499)">Buy Now</button>
+</div>
+
+
+<!-- 4. BLACK HAT -->
+<div class="product" data-category="hoodies" onclick="openProductModal('BLACK HAT', '₱499', [
+  'https://drive.google.com/uc?export=view&id=1Es5LulanhzrL5rw-rPgOEo-F7PjnKGEB',
+  'https://drive.google.com/uc?export=view&id=1ra-7sC3lskxLnY2bDAoThtsix_tZZ_fm',
+  'https://images.scalebranding.com/bb488882-8256-446b-8b4b-950fdf842cc8.png'
+], 'Minimalist BLACK HAT graphic hoodie.')">
+  <img src="https://drive.google.com/uc?export=view&id=1Es5LulanhzrL5rw-rPgOEo-F7PjnKGEB" alt="BLACK HAT Hoodie">
+  <h3>BLACK HAT</h3>
+  <p class="price">₱499</p>
+  <button onclick="event.stopPropagation(); addToCart('BLACK HAT', 499)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('BLACK HAT', 499)">Buy Now</button>
+</div>
+
+
+<!-- 5. CIAO CIAO CIAO -->
+<div class="product" data-category="hoodies" onclick="openProductModal('CIAO CIAO CIAO', '₱499', [
+  'https://drive.google.com/uc?export=view&id=1KjzlhpTzJBJ3VbH_UmhH3-LmIE3FRg1f',
+  'https://drive.google.com/uc?export=view&id=1DGY5bFHYP_NhQuHqpeG1ssIA4WhlPzNm',
+  'https://images-platform.99static.com/sUerJHEF_VQfp91XGdUXiebluqQ=/171x117:1505x1451/500x500/top/smart/99designs-contests-attachments/118/118171/attachment_118171267'
+], 'Money Heist inspired hoodie featuring “CIAO CIAO CIAO”.')">
+  <img src="https://drive.google.com/uc?export=view&id=1KjzlhpTzJBJ3VbH_UmhH3-LmIE3FRg1f" alt="CIAO CIAO CIAO Hoodie">
+  <h3>CIAO CIAO CIAO</h3>
+  <p class="price">₱499</p>
+  <button onclick="event.stopPropagation(); addToCart('CIAO CIAO CIAO', 499)">Add to Cart</button>
+  <button onclick="event.stopPropagation(); buyNow('CIAO CIAO CIAO', 499)">Buy Now</button>
+</div>
+
+<!-- Product Details Modal -->
+<div id="productModal" class="product-modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+
+    <div class="modal-left">
+      <button class="prev-btn">&#10094;</button>
+      <div class="image-container">
+        <img id="modalImage" src="" alt="Product Image">
+        <span class="heart" id="likeBtn">&#10084;</span> <!-- Heart on bottom left -->
+      </div>
+      <button class="next-btn">&#10095;</button>
+    </div>
+
+    <div class="modal-right">
+      <div class="logo">
+        <img src="logo.png" alt="Shop Logo" style="width:80px; margin-bottom:10px;">
+      </div>
+      <h2 id="modalName">Product Name</h2>
+      <p class="modal-price" id="modalPrice">₱0.00</p>
+      <p id="modalDesc">Product description goes here.</p>
+      <p class="stock" id="modalStock">Stock: 10</p>
+
+      <!-- Size Selector for Shirt/Shoes -->
+      <div class="size-selector" id="sizeSelector">
+        <h4>Select Size:</h4>
+        <div class="sizes" id="sizesContainer">
+          <!-- Sizes will dynamically change based on product type -->
+        </div>
+      </div>
+
+      <!-- Quantity Selector for Socks -->
+      <div class="quantity-selector" id="quantitySelector" style="display:none;">
+        <h4>Select Quantity (Pairs):</h4>
+        <select id="sockQuantity">
+          <option value="2">2 pairs</option>
+          <option value="3">3 pairs</option>
+          <option value="4">4 pairs</option>
+          <option value="5">5 pairs</option>
+          <option value="6">6 pairs</option>
+          <option value="7">7 pairs</option>
+          <option value="8">8 pairs</option>
+        </select>
+      </div>
+
+      <!-- Buttons at bottom left -->
+      <div class="modal-buttons" style="display:flex; gap:10px; margin-top:20px;">
+        <button class="add-cart-btn">Add to Cart</button>
+        <button class="buy-now-btn">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-box">
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <p><strong>Total: ₱<span id="cartTotal">0</span></strong></p>
+      <button class="close-cart" onclick="closeCart()">Close</button>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+
