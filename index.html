@@ -12,18 +12,25 @@
     <!-- Navigation -->
     <nav>
         <img src="images/logoafeec.png" alt="AFEEC Logo" class="logo-img">
-        <div class="nav-links">
+        
+        <!-- Hamburger Menu (Mobile) -->
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
-            <a href="#blog">Blog</a>
-            <a href="shop.html">Shop</a>
             <a href="#about">About</a>
+            <a href="shop.html">Shop</a>
             <a href="#contact">Contact</a>
         </div>
+        
         <div class="icons">
             <input type="checkbox" id="search-toggle">
             <label for="search-toggle"><i class="fa-solid fa-magnifying-glass"></i></label>
             <div class="search-box">
-                <input type="text" placeholder="Search...">
+                <input type="text" placeholder="Search..." id="searchInput">
             </div>
             <a href="#login"><i class="fa-solid fa-user"></i></a>
             <a href="shop.html"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -57,29 +64,29 @@
             <h4>Your Wardrobe's Glow-up Starts here - Up to 70% Off</h4>
             <a href="shop.html"><button class="shop-btn">SHOP NOW</button></a>
         </div>
-        <img src="images/featuredproduct.png" class="right-img" alt="Models">
+        <img src="images/featuredproduct.png" class="right-img" alt="Featured Product">
     </section>
 
     <!-- New Release Section -->
     <h2 class="title">New Release</h2>
     <section class="product-grid">
         <div class="product-card">
-            <img src="images/skatersoul.png" alt="Product 1">
+            <img src="images/skatersoul.png" alt="Skater Soul">
             <h3>Skater Soul Tee</h3>
             <p class="price">₱599.00</p>
         </div>
         <div class="product-card">
-            <img src="images/chaosclowntee.png" alt="Product 2">
+            <img src="images/chaosclowntee.png" alt="Chaos Clown">
             <h3>Chaos Clown Tee</h3>
             <p class="price">₱599.00</p>
         </div>
         <div class="product-card">
-            <img src="images/ashfadebite.jpg" alt="Product 3">
+            <img src="images/ashfadebite.jpg" alt="Ash Fade">
             <h3>Ash Fade Bite</h3>
             <p class="price">₱599.00</p>
         </div>
         <div class="product-card">
-            <img src="images/skatercrewcrop.png" alt="Product 4">
+            <img src="images/skatercrewcrop.png" alt="Skater Crew">
             <h3>Skater Crew Crop</h3>
             <p class="price">₱499.00</p>
         </div>
@@ -120,10 +127,9 @@
         </div>
     </section>
 
-    <!-- FOOTER - COMPACT BLACK DESIGN -->
+    <!-- FOOTER -->
     <footer class="site-footer" id="contact">
         <div class="footer-main">
-            <!-- Column 1: Newsletter -->
             <div class="footer-col footer-newsletter-col">
                 <h2>Newsletter</h2>
                 <p>Want to know what we're up to? Sign up for the newsletter and join our tribe.</p>
@@ -133,7 +139,6 @@
                 </form>
             </div>
 
-            <!-- Column 2: Schedule & Address -->
             <div class="footer-col footer-info-col">
                 <div class="info-section">
                     <h3>Schedule</h3>
@@ -147,7 +152,6 @@
                 </div>
             </div>
 
-            <!-- Column 3: Follow Us & Contact -->
             <div class="footer-col footer-social-col">
                 <div class="info-section">
                     <h3>Follow us</h3>
@@ -157,8 +161,8 @@
                 </div>
                 <div class="info-section">
                     <h3>Contact</h3>
-                    <p>T: +63 912 345 6790 </p>
-                    <p>E: afeec@tip.edu.ph </p>
+                    <p>T: <a href="tel:+639123456790">+63 912 345 6790</a></p>
+                    <p>E: <a href="mailto:afeec@tip.edu.ph">afeec@tip.edu.ph</a></p>
                 </div>
             </div>
         </div>
@@ -171,4 +175,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
