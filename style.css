@@ -8,7 +8,7 @@
 body {
     background-color: rgb(214, 212, 212);
     margin: 0;
-    padding-top: 70px;
+    padding-top: 0; /* FIXED: Changed from 70px to 0 */
 }
 
 nav {
@@ -199,14 +199,14 @@ a{
     display: flex;
 }
 
-/* ====== HERO SECTION - FIXED SPACING ====== */
+/* ====== HERO SECTION - COMPLETELY FIXED ====== */
 .content-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1400px;
-    margin: 0 auto; /* FIXED: Removed top/bottom margin */
-    padding: 20px 60px; /* FIXED: Reduced padding from 40px to 20px */
+    margin: 0 auto; /* FIXED: Removed all margin spacing */
+    padding: 70px 60px 20px 60px; /* FIXED: Added top padding to account for fixed nav */
     gap: 50px;
 }
 
@@ -274,7 +274,7 @@ a{
     color: black;
     position: relative;
     text-align: center;
-    margin: 20px 0; /* FIXED: Changed from 'margin: 20px' to reduce spacing */
+    margin: 10px 0; /* FIXED: Reduced from 20px to 10px */
 }
 
 .title::after {
@@ -294,7 +294,7 @@ a{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 30px;
-    margin: 30px auto 60px; /* FIXED: Reduced top margin from 60px to 30px */
+    margin: 20px auto 40px; /* FIXED: Reduced top margin to 20px */
     max-width: 1200px;
     padding: 0 20px;
     justify-items: center;
@@ -509,7 +509,7 @@ a{
 @media (min-width: 1024px) and (max-width: 1439px) {
     .content-section {
         max-width: 1000px;
-        padding: 20px 40px; /* FIXED: Adjusted padding */
+        padding: 70px 40px 20px 40px;
     }
 
     .hero-logo {
@@ -538,7 +538,7 @@ a{
 
     .content-section {
         flex-direction: column;
-        padding: 20px; /* FIXED: Reduced padding */
+        padding: 70px 20px 20px 20px;
         text-align: center;
     }
 
@@ -581,8 +581,8 @@ a{
     }
 
     .content-section {
-        margin: 0 auto; /* FIXED: Removed margin */
-        padding: 15px; /* FIXED: Further reduced padding for mobile */
+        margin: 0 auto;
+        padding: 70px 15px 15px 15px;
     }
 
     .hero-logo {
@@ -596,7 +596,7 @@ a{
     .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 15px;
-        margin-top: 20px; /* FIXED: Reduced top margin */
+        margin-top: 15px;
     }
 
     .product-card {
