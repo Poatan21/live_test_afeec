@@ -1,13 +1,427 @@
-/* ================================================
-   FOOTER - COMPACT BLACK DESIGN
-   ================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
+body {
+    background-color: rgb(214, 212, 212);
+    margin: 0;
+    padding-top: 70px;
+}
+
+/* ====== NAVIGATION - RESPONSIVE ====== */
+nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo-img {
+    width: 120px;
+    max-width: 150px;
+    filter: invert(100%);
+}
+
+/* Hamburger Menu (Hidden on Desktop) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.icons a {
+    color: white;
+}
+
+.icons i {
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.icons i:hover {
+    color: #ccc;
+}
+
+.search-box {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 250px;
+}
+
+#search-toggle {
+    display: none;
+}
+
+#search-toggle:checked ~ .search-box {
+    display: flex;
+}
+
+/* ====== LOGIN MODAL ====== */
+.login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.login-modal:target {
+    display: flex;
+}
+
+.login-box {
+    background: white;
+    padding: 50px;
+    border-radius: 70px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 9px 9px 0 black;
+}
+
+.logo {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.btn {
+    width: 100%;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 4px 4px 0 grey;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+    box-shadow: 6px 6px 0 black;
+}
+
+.links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.close-btn {
+    display: inline-block;
+    margin-top: 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* ====== HERO SECTION ====== */
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 20px auto 40px;
+    padding: 30px 60px;
+    gap: 50px;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-logo {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.text-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.text-content h4 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.right-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.shop-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+/* ====== TITLE ====== */
+.title {
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background-color: rgb(53, 53, 53);
+    border-radius: 2px;
+}
+
+/* ====== PRODUCT GRID ====== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    justify-items: center;
+}
+
+.product-card {
+    background: #fff;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 8px 8px 0px #000;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    box-shadow: 12px 12px 0px #000;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.product-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #000;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* ====== ABOUT SECTION ====== */
+.about-section {
+    background: linear-gradient(to bottom, white, #f2f2f2);
+    padding: 60px 100px;
+    text-align: center;
+    color: black;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-section h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: black;
+    margin: 8px auto 0;
+    border-radius: 10px;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.cta-about {
+    background: white;
+    color: black;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #000;
+    transition: all 0.3s;
+}
+
+.cta-about:hover {
+    background: black;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ====== CATEGORIES ====== */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    justify-items: center;
+}
+
+.category-box {
+    width: 100%;
+    max-width: 250px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 0 black;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.category-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0 gray;
+}
+
+.category-box i {
+    font-size: 40px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.category-box h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.category-box p {
+    font-size: 14px;
+    color: grey;
+}
+
+/* ====== FOOTER - COMPACT BLACK ====== */
 .site-footer {
-    background-color: #000000;
+    background-color: #000;
     color: white;
     padding: 40px 0 15px 0;
     margin-top: 60px;
-    font-family: 'Poppins', sans-serif;
 }
 
 .footer-main {
@@ -17,7 +431,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
-    align-items: start;
 }
 
 .footer-col {
@@ -30,7 +443,6 @@
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
-    color: white;
 }
 
 .footer-newsletter-col p {
@@ -52,12 +464,6 @@
     background: white;
     color: #333;
     font-size: 13px;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-}
-
-.newsletter-form-inline input::placeholder {
-    color: #aaa;
 }
 
 .newsletter-form-inline button {
@@ -67,10 +473,7 @@
     border: none;
     font-size: 13px;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
     cursor: pointer;
-    transition: background 0.3s;
-    white-space: nowrap;
 }
 
 .newsletter-form-inline button:hover {
@@ -85,7 +488,6 @@
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 8px;
-    color: white;
 }
 
 .info-section p {
@@ -101,7 +503,6 @@
     text-decoration: underline;
     font-size: 13px;
     margin: 4px 0;
-    transition: opacity 0.3s;
 }
 
 .info-section a:hover {
@@ -117,18 +518,80 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
-@media (max-width: 1200px) {
-    .footer-main {
-        gap: 40px;
-        padding: 0 40px 30px 40px;
-    }
-}
+/* ================================================
+   RESPONSIVE BREAKPOINTS
+   ================================================ */
 
+/* TABLET: 768px - 1023px */
 @media (max-width: 1023px) {
+    /* Navigation */
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 250px;
+        height: calc(100vh - 70px);
+        background: black;
+        flex-direction: column;
+        padding: 30px 20px;
+        transition: right 0.3s;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links a {
+        padding: 15px 0;
+        border-bottom: 1px solid #333;
+    }
+    
+    /* Hero */
+    .content-section {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    
+    .text-content {
+        max-width: 100%;
+    }
+    
+    .hero-logo {
+        max-width: 250px;
+    }
+    
+    .right-img {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+    
+    /* Products */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    /* Categories */
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* About */
+    .about-section {
+        padding: 40px 30px;
+    }
+    
+    /* Footer */
     .footer-main {
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 0 30px 30px 30px;
+        padding: 0 30px 30px;
     }
     
     .footer-copyright {
@@ -136,13 +599,88 @@
     }
 }
 
+/* MOBILE: Below 768px */
 @media (max-width: 767px) {
+    /* Navigation */
+    nav {
+        padding: 15px 20px;
+    }
+    
+    .logo-img {
+        width: 80px;
+    }
+    
+    .icons {
+        gap: 15px;
+    }
+    
+    .icons i {
+        font-size: 16px;
+    }
+    
+    .search-box {
+        right: 0;
+        width: 200px;
+    }
+    
+    .search-box input {
+        width: 150px;
+    }
+    
+    /* Hero */
+    .content-section {
+        padding: 20px 15px;
+    }
+    
+    .hero-logo {
+        max-width: 200px;
+    }
+    
+    .text-content h1 {
+        font-size: 28px;
+    }
+    
+    .text-content h4 {
+        font-size: 14px;
+    }
+    
+    /* Products */
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+        margin: 30px auto;
+    }
+    
+    .product-card {
+        max-width: 100%;
+    }
+    
+    .product-card img {
+        height: 180px;
+    }
+    
+    /* Categories */
+    .categories {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* About */
+    .about-section {
+        padding: 30px 20px;
+    }
+    
+    .about-section h2 {
+        font-size: 24px;
+    }
+    
+    /* Footer */
     .site-footer {
         padding: 30px 0 15px 0;
     }
     
     .footer-main {
-        padding: 0 20px 20px 20px;
+        padding: 0 20px 20px;
         gap: 25px;
     }
     
@@ -159,11 +697,20 @@
         width: 100%;
     }
     
-    .info-section h3 {
-        font-size: 16px;
-    }
-    
     .footer-copyright {
         margin: 0 20px;
+    }
+}
+
+/* LARGE DESKTOP: 1920px+ */
+@media (min-width: 1920px) {
+    .content-section {
+        max-width: 1600px;
+    }
+    
+    .product-grid,
+    .categories {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1400px;
     }
 }
